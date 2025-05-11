@@ -1,0 +1,90 @@
+.hero {
+  height: 100vh;
+  background: url('/Users/samadhimunasinghe/Downloads/NEW PORTFOLIO/src/assets/Background.jpg') center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  position: relative;
+  text-align: left;
+  padding: 0 5vw;
+  overflow: hidden; 
+}
+
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #ddd;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero-cta .btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 0.9rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 400;
+  transition: 0.3s ease, transform 0.3s ease;
+  backdrop-filter: blur(8px);
+  display: inline-block;
+}
+
+.hero-cta .btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.hero-content::after {
+  content: '';
+  position: absolute;
+  bottom: -70%;
+  left: 90%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 50%;
+  animation: scrollDown 2s infinite;
+}
+
+.hero-content::before {
+  content: 'scroll';
+  position: absolute;
+  bottom: -85%;
+  left: 90%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 70px;
+  background-color: white;
+  animation: scrollDown 2s infinite;
+}
+
+@keyframes scrollDown {
+  0% { transform: translate(-50%, 0); opacity: 0.5; }
+  50% { transform: translate(-50%, 10px); opacity: 1; }
+  100% { transform: translate(-50%, 0); opacity: 0.5; }
+} 
