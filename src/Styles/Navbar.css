@@ -20,7 +20,7 @@
   align-items: center;
   gap: 2rem;
   padding: 0.8rem 2rem;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(9, 9, 9, 0.6);
   border-radius: 2rem;
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);

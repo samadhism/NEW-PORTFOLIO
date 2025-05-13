@@ -1,6 +1,6 @@
 .hero {
   height: 100vh;
-  background: url('/Users/samadhimunasinghe/Downloads/NEW PORTFOLIO/src/assets/Background.jpg') center center/cover no-repeat;
+  background: url('/Users/samadhimunasinghe/Downloads/NEW PORTFOLIO/src/assets/backgroundimage.png') center center/cover no-repeat;
   display: flex;
   align-items: center;
   /* justify-content: center; */
@@ -8,6 +8,7 @@
   text-align: left;
   padding: 0 5vw;
   overflow: hidden; 
+  
 }
 
 
@@ -16,7 +17,7 @@
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(2px);
+  /* backdrop-filter: blur(2px); */
   z-index: 0;
 }
 
@@ -35,10 +36,11 @@
 
 .hero-subtitle {
   font-size: 1.25rem;
-  color: #ddd;
+  color: #d1d1d1;
   max-width: 600px;
   margin-bottom: 2rem;
   line-height: 1.6;
+  font-weight: 100;
 }
 
 .hero-cta .btn {
@@ -61,7 +63,7 @@
 .hero-content::after {
   content: '';
   position: absolute;
-  bottom: -70%;
+  bottom: -60%;
   left: 90%;
   transform: translateX(-50%);
   width: 50px;
@@ -72,9 +74,9 @@
 }
 
 .hero-content::before {
-  content: 'scroll';
+  content: '';
   position: absolute;
-  bottom: -85%;
+  bottom: -75%;
   left: 90%;
   transform: translateX(-50%);
   width: 2px;
@@ -83,8 +85,40 @@
   animation: scrollDown 2s infinite;
 }
 
+.scroll{
+  position: absolute;
+  bottom: -75%;
+  left: 92%;
+  font-size:small;
+  font-weight: 100;
+}
+
+
 @keyframes scrollDown {
   0% { transform: translate(-50%, 0); opacity: 0.5; }
   50% { transform: translate(-50%, 10px); opacity: 1; }
   100% { transform: translate(-50%, 0); opacity: 0.5; }
 } 
+
+
+.hero-ctaa .btn2 {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 0.9rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 400;
+  transition: 0.3s ease, transform 0.3s ease;
+  backdrop-filter: blur(8px);
+  position: absolute;
+  bottom: -75%;
+  right: -70%;
+}
+
+.hero-icon{
+  display: grid;
+  gap: 30px;
+  position: absolute;
+  bottom: 45%;
+  right: -70%;
+}

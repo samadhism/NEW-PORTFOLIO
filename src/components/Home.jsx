@@ -1,4 +1,8 @@
 import { motion } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBehance } from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import '../Styles/Home.css'
 
 function Home() {
@@ -11,7 +15,8 @@ function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-         Samadhi Munasinghe
+         SAMADHI
+         MUNASINGHE
         </motion.h1>
         <motion.p 
           className="hero-subtitle"
@@ -31,6 +36,33 @@ function Home() {
         >
           <a href="#projects" className="btn">View Work</a>
         </motion.div>
+
+        <motion.div
+          className= "hero-icon"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+    
+        <FontAwesomeIcon icon={faGithub} style={{ color: "#ffffff", fontSize: "28px" }} />
+        <FontAwesomeIcon icon={faLinkedinIn} style={{ color: "#ffffff", fontSize: "28px" }} />
+        <FontAwesomeIcon icon={faBehance} style={{ color: "#ffffff", fontSize: "28px" }} />
+
+    
+        </motion.div>
+
+
+        <motion.div
+          className="hero-ctaa"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <a href="#contact" className="btn2">Get In Touch</a>
+        </motion.div>
+
+        <p className='scroll'>scroll</p>
+
       </div>
     </section>
   );

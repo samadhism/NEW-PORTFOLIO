@@ -39,10 +39,9 @@ function App() {
     <div className="app">
       <Navbar />
       <Home />
-      <Projects />
       <About />
+      <Projects />
       <Contact />
-      <Blog />
     </div>
   );
 }
